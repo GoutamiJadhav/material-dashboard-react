@@ -36,7 +36,7 @@ import Projects from "layouts/dashboard/components/Projects";
 import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
 
 function Dashboard() {
-  const { sales, tasks } = reportsLineChartData;
+  const { sales, tasks, DailyTasks } = reportsLineChartData;
 
   return (
     <DashboardLayout>
@@ -131,6 +131,18 @@ function Dashboard() {
                 />
               </MDBox>
             </Grid>
+            <Grid item xs={12} md={6} lg={4}>
+              <MDBox mb={3}>
+                <ReportsLineChart
+                  color="dark"
+                  title="Goutami effortsheet"
+                  description="working efforts"
+                  date="updated 4 min ago"
+                  chart={DailyTasks}
+                />
+              </MDBox>
+            </Grid>
+
             <Grid item xs={12} md={6} lg={4}>
               <MDBox mb={3}>
                 <ReportsLineChart
