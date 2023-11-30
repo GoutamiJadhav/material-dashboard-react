@@ -23,8 +23,15 @@ export default {
     datasets: { label: "Desktop apps", data: [50, 40, 300, 220, 500, 250, 400, 230, 500] },
   },
   DailyTasks:{
-    labels: ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7'], 
-    datasets:{label: 'Tasks Completed',data: [5, 7, 3, 9, 6, 8, 4]} ,
+    labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5"], 
+    datasets:{ label: "Tasks Completed", data: [5, 7, 3, 9, 6] } ,
+
     
-}
+},
+marketing: {
+  labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+  datasets: { label: "Products", data: [10, 30, 40, 220, 500, 250, 400, 230, 100] },
+},
+
+
 };

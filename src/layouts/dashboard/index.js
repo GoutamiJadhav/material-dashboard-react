@@ -25,18 +25,22 @@ import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
 import ReportsBarChart from "examples/Charts/BarCharts/ReportsBarChart";
 import ReportsLineChart from "examples/Charts/LineCharts/ReportsLineChart";
+import PieChart from "examples/Charts/PieChart";
 import ComplexStatisticsCard from "examples/Cards/StatisticsCards/ComplexStatisticsCard";
 
 // Data
 import reportsBarChartData from "layouts/dashboard/data/reportsBarChartData";
 import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
+import reportspiechartdata from "layouts/dashboard/data/reportspiechartdata";
 
 // Dashboard components
 import Projects from "layouts/dashboard/components/Projects";
 import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
 
+
 function Dashboard() {
   const { sales, tasks, DailyTasks } = reportsLineChartData;
+  const salesb = reportsBarChartData
 
   return (
     <DashboardLayout>
@@ -112,10 +116,11 @@ function Dashboard() {
                   title="website views"
                   description="Last Campaign Performance"
                   date="campaign sent 2 days ago"
-                  chart={reportsBarChartData}
+                  chart={salesb}
                 />
               </MDBox>
             </Grid>
+            
             <Grid item xs={12} md={6} lg={4}>
               <MDBox mb={3}>
                 <ReportsLineChart
@@ -134,7 +139,7 @@ function Dashboard() {
             <Grid item xs={12} md={6} lg={4}>
               <MDBox mb={3}>
                 <ReportsLineChart
-                  color="dark"
+                  color="info"
                   title="Goutami effortsheet"
                   description="working efforts"
                   date="updated 4 min ago"
@@ -142,6 +147,17 @@ function Dashboard() {
                 />
               </MDBox>
             </Grid>
+            {/* <Grid item xs={12} md={6} lg={4}>
+              <MDBox mb={3}>
+                <ReportsLineChart
+                  color="success"
+                  title="marketing"
+                  description="product apps"
+                  date="updated 1 min ago"
+                  chart={marketing}
+                />
+              </MDBox>
+            </Grid> */}
 
             <Grid item xs={12} md={6} lg={4}>
               <MDBox mb={3}>
@@ -151,6 +167,17 @@ function Dashboard() {
                   description="Last Campaign Performance"
                   date="just updated"
                   chart={tasks}
+                />
+              </MDBox>
+            </Grid>
+            <Grid item xs={12} md={6} lg={4}>
+              <MDBox mb={3}>
+                <PieChart
+                  color="info"
+                  title="pie chart"
+                  description="Social media usage"
+                  date="just updated"
+                  chart={reportspiechartdata}
                 />
               </MDBox>
             </Grid>

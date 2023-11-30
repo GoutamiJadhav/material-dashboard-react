@@ -14,6 +14,16 @@ Coded by www.creative-tim.com
 */
 
 export default {
+  social:{
+    labels:["insta","twitter","facebook","thread"],
+    datasets: {label:"No of users",data: [10,100,20,40]}
+  },
+
+  salesb:{
   labels: ["M", "T", "W", "T", "F", "S", "S"],
   datasets: { label: "Sales", data: [50, 20, 10, 22, 50, 10, 40] },
+
+  },
+  
+  
 };
